@@ -1,0 +1,13 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main() {
+    srand(time(0));
+    int key = rand() % 10 + 1;
+    char msg[] = "HELLO";
+    for (int i=0; msg[i]; i++) msg[i]+=key;
+    printf("Encrypted: %s\n", msg);
+    for (int i=0; msg[i]; i++) msg[i]-=key;
+    printf("Decrypted: %s\n", msg);
+    return 0;
+}
