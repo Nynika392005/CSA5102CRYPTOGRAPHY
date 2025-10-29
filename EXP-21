@@ -1,0 +1,13 @@
+#include <stdio.h>
+int main(){
+    int pt[3]={10,20,30}, ct[3], key=2, prev=5;
+    // CFB Mode simulation
+    for(int i=0;i<3;i++){
+        int ks=(prev+key)%256;
+        ct[i]=pt[i]^ks;
+        prev=ct[i];
+    }
+    printf("CFB Ciphertext: ");
+    for(int i=0;i<3;i++) printf("%d ", ct[i]);
+    return 0;
+}
