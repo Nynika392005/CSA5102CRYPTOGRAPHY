@@ -1,0 +1,10 @@
+#include <stdio.h>
+int main() {
+    int pt[3]={10,20,30}, key=3, ctr=1;
+    printf("CTR Ciphertext: ");
+    for(int i=0;i<3;i++){
+        int keystream=key+ctr++;
+        printf("%d ", pt[i]^keystream);
+    }
+    return 0;
+}
