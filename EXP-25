@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+int main(){
+    srand(time(0));
+    int key = rand() % 256;
+    printf("Generated Key: %d\n", key);
+    return 0;
+}
