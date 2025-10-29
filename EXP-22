@@ -1,0 +1,9 @@
+#include <stdio.h>
+int main() {
+    char msg[]="ABC"; int key=2;
+    for (int i=0; msg[i]; i++) msg[i]+=key;
+    printf("Encrypted: %s\n", msg);
+    for (int i=0; msg[i]; i++) msg[i]-=key;
+    printf("Decrypted: %s\n", msg);
+    return 0;
+}
